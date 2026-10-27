@@ -35,7 +35,7 @@ reviewed, selected evidence; never commit credentials or raw server output.
 | Preservation of unrelated services | Passed selected before/after checks: original containers/ports, original configuration hashes, HTTP-to-HTTPS behavior and homepage body hashes for production/QA. [Supplemental evidence](studio/deployment-plan/additional-evidence.json). |
 | Own prediction, check interpretation, browser observation and keep/revise reason | [LEARNING.md](LEARNING.md): actual contributions and AI help recorded; accuracy/publication review approved October 27, 2026 |
 | Accuracy review before publishing learner excerpts | Approved October 27, 2026; see LEARNING.md |
-| Actual PR, latest CI, merge and issue closure | Pending |
+| Actual PR, latest CI, merge and issue closure | [PR #2](https://github.com/Y-Just-Y/373_hosting_dfp/pull/2), linked to [issue #1](https://github.com/Y-Just-Y/373_hosting_dfp/issues/1). [Live CI history](https://github.com/Y-Just-Y/373_hosting_dfp/actions) and PR checks provide final status; merge is gated on passing checks. |
 
 Link the exported `studio/evidence.json`, actual CI and issue/PR when available.
 CI does not deploy this server. A fixture, green check, timestamp, closed issue
