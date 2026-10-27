@@ -1,0 +1,27 @@
+{
+  "http": {
+    "routers": {
+      "is373-studio-calculator": {
+        "rule": "Host(`calc.lwdgyasteri.com`)",
+        "entryPoints": [
+          "websecure"
+        ],
+        "service": "is373-studio-calculator",
+        "tls": {
+          "certResolver": "letsencrypt"
+        }
+      }
+    },
+    "services": {
+      "is373-studio-calculator": {
+        "loadBalancer": {
+          "servers": [
+            {
+              "url": "http://is373-studio-calculator-calculator-1:8000"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

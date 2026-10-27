@@ -1,0 +1,21 @@
+{
+  "original_configuration_hashes_unchanged": true,
+  "original_running_containers_unchanged": true,
+  "existing_sites_http_https_and_body_hashes_unchanged": true,
+  "new_route_present": true,
+  "local_checks": {
+    "black": "passed",
+    "pylint": "passed",
+    "unit_integration_passed": 91,
+    "docker_chromium_e2e_passed": 2
+  },
+  "ai_public_browser_check": {
+    "input": "6 multiply 7",
+    "browser_result": 42,
+    "api_result": 42,
+    "message": "Results match"
+  },
+  "learner_public_browser_observation": "Recorded in LEARNING.md; reviewed and approved for publication",
+  "ci": "Not run",
+  "issue_pr": "Issue https://github.com/Y-Just-Y/373_hosting_dfp/issues/1; see SPEC.md for PR and current CI"
+}
