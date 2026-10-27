@@ -1,0 +1,52 @@
+{
+  "name": "is373-studio-calculator",
+  "services": {
+    "calculator": {
+      "image": "docker.io/kaw393939/is373_ci_cd@sha256:aec414c990a5de6ed74c9e8dcb105b78f6358c03a8cea70a9d40dcda51c3a8fa",
+      "user": "10001:10001",
+      "read_only": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "pids_limit": 128,
+      "mem_limit": "256m",
+      "cpus": 1,
+      "tmpfs": [
+        "/tmp:rw,noexec,nosuid,nodev,size=64m,mode=1777"
+      ],
+      "environment": {
+        "APP_ENV": "production"
+      },
+      "restart": "unless-stopped",
+      "logging": {
+        "driver": "json-file",
+        "options": {
+          "max-size": "10m",
+          "max-file": "3"
+        }
+      },
+      "labels": {
+        "org.is373.studio.lesson": "STUDIO-001",
+        "org.is373.studio.owner": "826c3d8b3427ea7d369a",
+        "traefik.enable": "true",
+        "traefik.docker.network": "lwdgy-security-lab_edge",
+        "traefik.http.routers.is373-studio-calculator.rule": "Host(`calc.lwdgyasteri.com`)",
+        "traefik.http.routers.is373-studio-calculator.entrypoints": "websecure",
+        "traefik.http.routers.is373-studio-calculator.service": "is373-studio-calculator",
+        "traefik.http.services.is373-studio-calculator.loadbalancer.server.port": "8000"
+      },
+      "networks": [
+        "hosting"
+      ]
+    }
+  },
+  "networks": {
+    "hosting": {
+      "external": true,
+      "name": "lwdgy-security-lab_edge"
+    }
+  }
+}
